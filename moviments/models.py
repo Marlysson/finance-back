@@ -22,5 +22,4 @@ class Moviment(models.Model):
 		return moviment_type_operation * self.amount
 
 	class Meta:
-		managed = False
 		db_table = "moviment"
