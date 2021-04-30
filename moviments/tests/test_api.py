@@ -81,3 +81,4 @@ class MovimentsAPITest(APITestCase):
 		]
 
 		self.assertEqual(response.json(), correct_response_api)
+		
