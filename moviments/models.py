@@ -7,7 +7,7 @@ class Moviment(models.Model):
 		("INCOME", "INCOME")
 	]	
 
-	description = models.CharField(max_length=255, default='')
+	description = models.CharField(max_length=255, blank=False, null=False)
 	amount = models.DecimalField(max_digits=7, decimal_places=2)
 	operation = models.CharField(max_length=7, choices=TYPES)
 

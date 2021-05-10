@@ -5,4 +5,4 @@ from .models import Moviment
 class MovimentSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Moviment
-		fields = ["amount", "operation"]
+		fields = '__all__'
