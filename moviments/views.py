@@ -21,9 +21,9 @@ class StatisticsView(APIView):
 		expenses = Moviment.objects.filter(operation="EXPENSE")
 
 		data = {
-			"balance": Calculator.calculate(moviments),
-			"incomes": Calculator.calculate(incomes),
-			"expenses": Calculator.calculate(expenses)
+			"balance": str(Calculator.calculate(moviments)),
+			"incomes": str(Calculator.calculate(incomes)),
+			"expenses": str(abs(Calculator.calculate(expenses)))
 		}
 
 		return Response(data=data, status=status.HTTP_200_OK)
